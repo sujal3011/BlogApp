@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'user_profile.apps.UserProfileConfig',
-    'blog.apps.BlogConfig'
+    'blog.apps.BlogConfig',
+    'social_django'
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,8 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)

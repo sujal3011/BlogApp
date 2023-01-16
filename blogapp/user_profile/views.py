@@ -43,8 +43,6 @@ class RegisterView(APIView):
 
 
 
-
-
 class LoginView(APIView):
 
     def post(self,request):
